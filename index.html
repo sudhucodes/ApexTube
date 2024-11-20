@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- ------Code with SudhuCodes------ -->
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexBots - Explore Powerful Bots</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="font-['Outfit'] flex flex-col justify-between min-h-screen bg-gradient-to-b from-[#F2FFF9] to-[#FFF6F1] overflow-hidden">
+
+
+    <nav class="w-full h-20 flex items-center px-6 md:px-0 md:justify-around justify-between py-4">
+        <!-- Logo section for desktop and mobile -->
+        <a href="index.html">
+            <img class="w-36 md:w-auto" src="./images/apextube-logo.svg" alt="apextube-logo">
+        </a>
+    
+        <!-- Navigation links for desktop view -->
+        <ul class="hidden md:flex items-center space-x-10">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Bots</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    
+        <!-- Buttons for desktop view -->
+        <div class="hidden md:flex items-center space-x-6">
+            <!-- Dark mode Button -->
+            <button>
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.25 11.7242C19.1058 13.2845 18.5202 14.7715 17.5617 16.0112C16.6032 17.2509 15.3115 18.192 13.8377 18.7243C12.3639 19.2567 10.769 19.3583 9.23954 19.0173C7.7101 18.6762 6.30941 17.9067 5.20137 16.7986C4.09334 15.6906 3.32378 14.2899 2.98275 12.7605C2.64172 11.231 2.74332 9.63608 3.27567 8.16227C3.80802 6.68847 4.7491 5.39675 5.98878 4.43827C7.22846 3.47979 8.71548 2.8942 10.2758 2.75C9.3623 3.98591 8.9227 5.50866 9.03699 7.0413C9.15128 8.57393 9.81187 10.0146 10.8986 11.1014C11.9854 12.1881 13.4261 12.8487 14.9587 12.963C16.4913 13.0773 18.0141 12.6377 19.25 11.7242Z" stroke="#1F2937" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <!-- Call-to-action button -->
+            <button class="bg-indigo-500 text-white w-36 text-sm h-10 rounded-full">
+                Explore Bots
+            </button>
+        </div>
+    
+        <!-- Hamburger menu button for mobile view -->
+        <button onclick="openMenu()" id="menu-open-btn" class="md:hidden flex">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.75 7H18.25M1.75 1.5H18.25M1.75 12.5H18.25" stroke="#1F2937" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <!-- Close menu button for mobile view -->
+        <button onclick="closeMenu()" id="menu-close-btn" class="md:hidden hidden">
+            <svg width="18" height="18" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="12.5317" width="17.4978" height="2.09974" rx="1.04987" transform="rotate(-45.7402 0 12.5317)" fill="#1F2937" fill-opacity="0.7"/>
+                <rect x="12.5312" y="13.9144" width="17.4978" height="2.09974" rx="1.04987" transform="rotate(-135.74 12.5312 13.9144)" fill="#1F2937" fill-opacity="0.7"/>
+            </svg>
+        </button>
+    
+        <!-- Mobile navigation menu -->
+        <ul id="mobile-menu" class="flex flex-col absolute h-screen w-8/12 bg-indigo-200 left-0 top-0 md:hidden items-start gap-4 pt-10 px-6 transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <!-- Mobile logo -->
+            <div class="pb-6">
+                <a href="index.html">
+                    <img class="w-36 md:w-auto" src="./images/apextube-logo.svg" alt="apextube-logo">
+                </a>
+            </div>
+            <!-- Mobile navigation links -->
+            <li><a onclick="closeMenu()" href="#">Home</a></li>
+            <li><a onclick="closeMenu()" href="#">Bots</a></li>
+            <li><a onclick="closeMenu()" href="#">About</a></li>
+            <li><a onclick="closeMenu()" href="#">Contact</a></li>
+            <!-- Mobile call-to-action button -->
+            <button class="bg-indigo-500 text-white w-36 text-sm h-10 rounded-full">
+                Explore Bots
+            </button>
+        </ul>
+    </nav>
+    
+
+    <!-- -----------HERO SECTION----------- -->
+    <!-- The hero section is divided into two main parts: text content and an illustration image -->
+    <section class="flex md:flex-row flex-col-reverse items-center justify-between md:px-24 px-6">
+        <!-- Text Content Section -->
+        <div class="md:w-1/2 mb-20">
+            <!-- Main Heading with gradient-styled text -->
+            <h1 class="md:text-5xl text-3xl text-center md:text-left md:leading-[60px] md:w-[600px] font-semibold text-gray-900">
+                Download 
+                <span class="bg-gradient-to-r from-[#4338CA] to-[#8B5CF6] bg-clip-text text-transparent">
+                    Instagram Content & YouTube Videos
+                </span> Effortlessly!
+            </h1>
+            <!-- URL Input and Download Button Section -->
+            <div class="flex md:flex-row flex-col gap-6 md:gap-0 items-center mt-7">
+                <!-- Input Box with URL placeholder -->
+                <div class="flex items-center text-sm bg-white h-12 border rounded border-gray-500/30 w-[360px]">
+                    <!-- Static URL prefix -->
+                    <div class="bg-gray-500/10 h-full px-3 flex items-center justify-center text-gray-500">
+                        <p>https://</p>
+                    </div>
+                    <!-- Input field for video URL -->
+                    <input id="videoUrl" class="px-2 w-full h-full outline-none text-gray-500 bg-transparent" type="email" placeholder="youtube.com">
+                    <!-- Icon within input box -->
+                    <svg class="mr-3" width="21" height="21" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.50064 9.74997C7.82273 10.1806 8.23366 10.5369 8.70555 10.7947C9.17745 11.0525 9.69927 11.2058 10.2356 11.2442C10.772 11.2826 11.3103 11.2053 11.8141 11.0173C12.318 10.8294 12.7755 10.5353 13.1556 10.155L15.4056 7.90497C16.0887 7.19772 16.4667 6.25046 16.4582 5.26722C16.4496 4.28398 16.0552 3.34344 15.36 2.64815C14.6647 1.95287 13.7241 1.55849 12.7409 1.54995C11.7577 1.5414 10.8104 1.91938 10.1031 2.60247L8.81314 3.88497M10.5006 8.24997C10.1785 7.81938 9.76762 7.46309 9.29573 7.20527C8.82383 6.94745 8.30201 6.79414 7.76565 6.75572C7.22929 6.71731 6.69095 6.7947 6.18713 6.98264C5.68331 7.17058 5.2258 7.46467 4.84564 7.84497L2.59564 10.095C1.91255 10.8022 1.53457 11.7495 1.54311 12.7327C1.55165 13.716 1.94604 14.6565 2.64132 15.3518C3.3366 16.0471 4.27715 16.4415 5.26038 16.45C6.24362 16.4585 7.19088 16.0806 7.89814 15.3975L9.18064 14.115" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <!-- Download Button -->
+                <button onclick="startDownload()" class="flex items-center justify-center gap-3 bg-indigo-500 hover:brightness-90 transition text-white text-sm h-12 px-8 rounded ml-4">
+                    Download
+                    <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.125 13V17C18.125 17.5304 17.9231 18.0391 17.5636 18.4142C17.2042 18.7893 16.7167 19 16.2083 19H2.79167C2.28334 19 1.79582 18.7893 1.43638 18.4142C1.07693 18.0391 0.875 17.5304 0.875 17V13M4.70833 8L9.5 13M9.5 13L14.2917 8M9.5 13V1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Status Display -->
+            <div class="pt-2" id="status">
+            </div>
+        </div>
+
+        <!-- Illustration Section -->
+        <div class="p-14 md:p-0">
+            <!-- Right-side decorative image -->
+            <img src="./images/right-side-illusration.svg" alt="right-side-illusration">
+        </div>
+    </section>
+
+
+
+    <!-- -----------FOOTER------------ -->
+    <footer class="flex md:flex-row flex-col-reverse gap-2 md:gap-0 items-center justify-between md:px-24 px-6 pb-4 text-sm text-gray-500">
+        <!-- Left Section: Logo and Copyright -->
+        <div class="flex items-center gap-5">
+            <!-- Logo (visible only on larger screens) -->
+            <img class="hidden md:inline-block" src="./images/apextube-logo.svg" alt="apextube-logo">
+            <!-- Vertical Divider (visible only on larger screens) -->
+            <div class="hidden md:inline-block h-6 w-px bg-gray-500/60"></div>
+            <!-- Copyright Text -->
+            <p>
+                All rights reserved. Copyright 
+                <a href="#" class="hover:text-gray-700 transition">@SudhuCodes</a>
+            </p>
+        </div>
+        <!-- Right Section: Social Media Links -->
+        <div class="flex items-center gap-3">
+            <!-- Facebook Link -->
+            <a href="#" class="hover:brightness-90 transition">
+                <img src="./images/facebook_icon.svg" alt="facebook_icon">
+            </a>
+            <!-- Twitter Link -->
+            <a href="#" class="hover:brightness-90 transition">
+                <img src="./images/twitter_icon.svg" alt="twitter_icon">
+            </a>
+            <!-- Instagram Link -->
+            <a href="#" class="hover:brightness-90 transition">
+                <img src="./images/instagram_icon.svg" alt="instagram_icon">
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        function openMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuOpenBtn = document.getElementById("menu-open-btn");
+        const menuCloseBtn = document.getElementById("menu-close-btn");
+
+        mobileMenu.classList.remove("-translate-x-full");
+        mobileMenu.classList.add("translate-x-0");
+        menuOpenBtn.classList.add("hidden");
+        menuCloseBtn.classList.remove("hidden");
+        }
+
+        function closeMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuOpenBtn = document.getElementById("menu-open-btn");
+        const menuCloseBtn = document.getElementById("menu-close-btn");
+
+        mobileMenu.classList.remove("translate-x-0");
+        mobileMenu.classList.add("-translate-x-full");
+        menuCloseBtn.classList.add("hidden");
+        menuOpenBtn.classList.remove("hidden");
+        }
+    </script>
+</body>
+
+</html>
