@@ -6,7 +6,7 @@ async function startDownload() {
     }
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/download', {
+        const response = await fetch('https://apexreelsdaily-production.up.railway.app/download', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,15 +22,15 @@ async function startDownload() {
                 `<p class="text-indigo-500 text-sm"><span class="font-medium">Requesting server to download your video.</span> Please wait...</p>`;
 
             const interval = setInterval(async () => {
-                const statusResponse = await fetch(`http://127.0.0.1:5000/status/${videoId}`);
+                const statusResponse = await fetch(`https://apexreelsdaily-production.up.railway.app/status/${videoId}`);
                 const statusData = await statusResponse.json();
 
                 if (statusData.status === "Completed") {
                     clearInterval(interval);
                     document.getElementById('status').innerHTML = 
-                        `<p class="text-indigo-500 text-sm">Your video has been successfully downloaded!</p>`;
+                        `<p class="text-indigo-500 text-sm">Downloading your video. Please wait...</p>`;
 
-                    const fetchResponse = await fetch(`http://127.0.0.1:5000/fetch/${videoId}`);
+                    const fetchResponse = await fetch(`https://apexreelsdaily-production.up.railway.app/fetch/${videoId}`);
                     if (fetchResponse.ok) {
                         const blob = await fetchResponse.blob();
                         const downloadLink = document.createElement('a');
